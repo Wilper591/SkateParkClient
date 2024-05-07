@@ -37,7 +37,7 @@ const loginAdmin = async () => {
       if (inputEmail.value === DBuser && inputPassword.value === DBpass) {
         sessionStorage.setItem("token", `${token}`);
         sessionStorage.setItem("admin", `${isAdmin}`);
-        window.location.replace("/client/views/admin.html");
+        window.location.replace("/admin.html");
       } else {
         errorMsj.innerHTML += `<p>Validación de datos errónea</p>`;
         setTimeout(() => {

@@ -25,8 +25,8 @@ salirBtn.addEventListener("click", () => {
   loggedOut();
 });
 
-if ( window.location.href.includes("/client/views/datos.html") && !sessionStorage.getItem("token")) {
-  location.replace("/client/views/index.html");
+if ( window.location.href.includes("/datos.html") && !sessionStorage.getItem("token")) {
+  location.replace("/index.html");
 }
 
 const getDatos = async () => {
@@ -48,7 +48,7 @@ const getDatos = async () => {
       mensaje = "";
       mensaje.innerHTML += `<p>Error al obtener datos</p>`;
       setTimeout(() => {
-        location.replace("/client/views/login.html");
+        location.replace("/login.html");
       }, 3000);
     }
   } catch (error) {
@@ -57,7 +57,7 @@ const getDatos = async () => {
     sessionStorage.removeItem("id");
     console.error("Error en Login: " + error);
     setTimeout(() => {
-      location.replace("/client/views/login.html");
+      location.replace("/login.html");
     }, 3000);
   }
 };
@@ -113,7 +113,7 @@ const editDatos = async () => {
     sessionStorage.removeItem("email");
     console.error("Error en Login: " + error);
     setTimeout(() => {
-      location.replace("/client/views/login.html");
+      location.replace("/login.html");
     }, 3000);
   }
 };
@@ -139,7 +139,7 @@ const deleteDatos = async () => {
 const loggedOut = () => {
   sessionStorage.removeItem("token");
   sessionStorage.removeItem("id");
-  location.replace("/client/views/login.html");
+  location.replace("/login.html");
 };
 
 const limpiarMsjDatos = (mensaje) => {

@@ -91,7 +91,7 @@ const registrarSkater = async () => {
     const response = await axios.post(`${URL_BASE}`, formData);
 
     if (response.data.status === "Success") {
-      location.replace("/client/views/Login.html");
+      location.replace("/Login.html");
     } else {
       errorMsj = "";
       errorMsj.innerHTML += "Error al crear usuario";
