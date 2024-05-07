@@ -26,7 +26,7 @@ salirBtn.addEventListener("click", () => {
 });
 
 if ( window.location.href.includes("/datos.html") && !sessionStorage.getItem("token")) {
-  location.replace("/SkateParkClient/index.html");
+  location.replace("./SkateParkClient/index.html");
 }
 
 const getDatos = async () => {
@@ -48,7 +48,7 @@ const getDatos = async () => {
       mensaje = "";
       mensaje.innerHTML += `<p>Error al obtener datos</p>`;
       setTimeout(() => {
-        location.replace("/SkateParkClient/login.html");
+        location.replace("./SkateParkClient/Login.html");
       }, 3000);
     }
   } catch (error) {
@@ -57,7 +57,7 @@ const getDatos = async () => {
     sessionStorage.removeItem("id");
     console.error("Error en Login: " + error);
     setTimeout(() => {
-      location.replace("/SkateParkClient/login.html");
+      location.replace("./SkateParkClient/Login.html");
     }, 3000);
   }
 };
@@ -113,7 +113,7 @@ const editDatos = async () => {
     sessionStorage.removeItem("email");
     console.error("Error en Login: " + error);
     setTimeout(() => {
-      location.replace("/SkateParkClient/login.html");
+      location.replace("./SkateParkClient/Login.html");
     }, 3000);
   }
 };
@@ -139,7 +139,7 @@ const deleteDatos = async () => {
 const loggedOut = () => {
   sessionStorage.removeItem("token");
   sessionStorage.removeItem("id");
-  location.replace("/SkateParkClient/login.html");
+  location.replace("./SkateParkClient/Login.html");
 };
 
 const limpiarMsjDatos = (mensaje) => {
