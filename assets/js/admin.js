@@ -15,7 +15,7 @@ btnLogout.addEventListener("click", () => {
   logoutAdmin();
 });
 
-if (window.location.href.includes("/SkateParkClient/Admin.html") && !sessionStorage.getItem("token") && !sessionStorage.getItem("admin")) {
+if (window.location.href.includes("./Admin.html") && !sessionStorage.getItem("token") && !sessionStorage.getItem("admin")) {
   location.replace("./Login.html");
 }
 
@@ -46,7 +46,6 @@ const getSkatersAdmin = async () => {
       return;
     }
   } catch (error) {
-    logoutAdmin();
     console.error("Error en Login: " + error);
   }
 };
@@ -63,7 +62,7 @@ const updateState = async (estado, id) => {
     if (!response.data.is_Admin) {
       logoutAdmin();
     } else {
-      return
+      return;
     }
   } catch (error) {
     logoutAdmin();
