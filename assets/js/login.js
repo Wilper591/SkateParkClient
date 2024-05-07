@@ -30,7 +30,7 @@ const login = async () => {
     if (inputEmail.value === DBuser && inputPassword.value === DBpass) {
       sessionStorage.setItem("token", `${token}`);
       sessionStorage.setItem("id", `${DBid}`);
-      window.location.replace("/datos.html");
+      window.location.replace("/SkateParkClient/datos.html");
     }
   } catch (error) {
     errorMsj.innerHTML += `<p class="mt-4">Usuario o contraseña incorrectos</p>`;

@@ -15,8 +15,8 @@ btnLogout.addEventListener("click", () => {
   logoutAdmin();
 });
 
-if (window.location.href.includes("/admin.html") && !sessionStorage.getItem("token") && !sessionStorage.getItem("admin")) {
-  location.replace("/login.html");
+if (window.location.href.includes("/SkateParkClient/admin.html") && !sessionStorage.getItem("token") && !sessionStorage.getItem("admin")) {
+  location.replace("/SkateParkClient/login.html");
 }
 
 const getSkatersAdmin = async () => {
@@ -74,6 +74,6 @@ const updateState = async (estado, id) => {
 const logoutAdmin = () => {
   sessionStorage.removeItem("token");
   sessionStorage.removeItem("admin");
-  location.replace("/loginAdmin.html");
+  location.replace("/SkateParkClient/loginAdmin.html");
 };
 getSkatersAdmin();
