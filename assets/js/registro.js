@@ -1,4 +1,4 @@
-const URL_BASE = "http://localhost:3000/apiV1/registro";
+const URL_BASE = "https://skateparkserver.onrender.com/apiV1/registro";
 const email = document.querySelector("#email");
 const nombre = document.querySelector("#nombre");
 const password = document.querySelector("#password");

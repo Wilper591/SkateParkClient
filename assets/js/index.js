@@ -1,4 +1,4 @@
-const URL_BASE = "http://localhost:3000/apiV1/main";
+const URL_BASE = "https://skateparkserver.onrender.com/apiV1/main";
 const skaters = document.querySelector(".skaters");
 
 const getSkaters = async () => {

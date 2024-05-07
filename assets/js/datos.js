@@ -1,4 +1,4 @@
-const URL_BASE = "http://localhost:3000/apiV1/datos";
+const URL_BASE = "https://skateparkserver.onrender.com/apiV1/datos";
 const inputEmail = document.querySelector("#email");
 const inputNombre = document.querySelector("#nombre");
 const inputPassword = document.querySelector("#password");
