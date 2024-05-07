@@ -80,7 +80,7 @@ const registrarSkater = async () => {
       return;
     }
 
-    const formData = new FormData();
+    let formData = new FormData();
     formData.append("email", email.value);
     formData.append("nombre", nombre.value);
     formData.append("password", password.value);
