@@ -1,4 +1,6 @@
 const URL_BASE = "https://skateparkserver.onrender.com/apiV1/datos";
+/* const URL_BASE = "http://localhost:3000/apiV1/datos"; */
+
 const inputEmail = document.querySelector("#email");
 const inputNombre = document.querySelector("#nombre");
 const inputPassword = document.querySelector("#password");
@@ -106,7 +108,6 @@ const editDatos = async () => {
       id: loggedIn,
     };
     const response = await axios.put(`${URL_BASE}?token=${token}`, data);
-    console.log(response);
   } catch (error) {
     mensaje.innerHTML += `<p>Error al editar datos, vuelve a iniciar sesion</p>`;
     sessionStorage.removeItem("token");

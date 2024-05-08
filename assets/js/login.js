@@ -1,4 +1,6 @@
 const URL_BASE = "https://skateparkserver.onrender.com/apiV1/login";
+/* const URL_BASE = "http://localhost:3000/apiV1/login"; */
+
 const inputEmail = document.querySelector("#email");
 const inputPassword = document.querySelector("#password");
 const ingresarBtn = document.querySelector("#ingresar");

@@ -1,4 +1,5 @@
 const URL_BASE = "https://skateparkserver.onrender.com/apiV1/admin";
+/* const URL_BASE = "http://localhost:3000/apiV1/admin"; */
 const skaters = document.querySelector("#skaters");
 const btnLogout = document.querySelector("#logout");
 const tabla = document.querySelector("#tablaSkaters");
